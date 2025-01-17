@@ -4,6 +4,9 @@ import img2 from '/assets/images/p2.jpg';
 import img3 from '/assets/images/p3.jpg';
 import img4 from '/assets/images/p4.jpg';
 import icon from '/assets/images/icon.jpg';
+import v1 from '/assets/images/v1.jpg';
+import v2 from '/assets/images/v2.jpeg';
+import v3 from '/assets/images/v3.jpg';
 
 
 
@@ -39,17 +42,17 @@ function App() {
 
   const videos = [
     {
-      thumbnail: "assets/images/v1.jpg",
+      thumbnail: v1, // Use the imported image
       title: "Crystallize",
       url: "https://www.youtube.com/embed/aHjpOzsQ9YI"
     },
     {
-      thumbnail: "assets/images/v2.jpeg",
+      thumbnail: v2, // Use the imported image
       title: "Underground",
       url: "https://www.youtube.com/embed/EJ09pSuA9hw"
     },
     {
-      thumbnail: "assets/images/v3.jpg",
+      thumbnail: v3, // Use the imported image
       title: "Guardian",
       url: "https://www.youtube.com/embed/4MCjU-Du3eI"
     }
@@ -69,7 +72,7 @@ function App() {
       <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
               Tikirimali Wickramasinghe
             </h1>
             <div className="hidden md:flex space-x-8">
