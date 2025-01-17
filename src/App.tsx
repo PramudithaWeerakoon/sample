@@ -72,7 +72,7 @@ function App() {
       <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent whitespace-nowrap overflow-hidden text-ellipsis">
               Tikirimali Wickramasinghe
             </h1>
             <div className="hidden md:flex space-x-8">
@@ -94,24 +94,24 @@ function App() {
       <section id="home" className="h-screen relative overflow-hidden gradient-overlay">
         <div className="absolute inset-0">
           <div className="flex items-center justify-center h-full">
-            <div className="text-center space-y-6">
-              <h2 className={`text-6xl md:text-8xl font-bold bg-gradient-to-r from-pink-500 via-orange-400 to-sky-400 bg-clip-text text-transparent transform ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
-                Tikirimali Wickramasinghe
-              </h2>
-              <p className={`text-xl md:text-2xl text-gray-600 transform ${isVisible ? 'animate-fade-in stagger-1' : 'opacity-0'}`}>
-                Classical Fusion Cellist
-              </p>
-              <button 
-                onClick={() => {
-                  setShowVideo(true);
-                  setCurrentVideo(videos[0].url);
-                }}
-                className={`bg-gradient-to-r from-pink-500 to-orange-400 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2 mx-auto transform ${isVisible ? 'animate-fade-in stagger-2' : 'opacity-0'}`}
-              >
-                <Play size={20} />
-                <span>Watch Latest Performance</span>
-              </button>
-            </div>
+        <div className="text-center space-y-6 px-4">
+            <h2 className={`text-[50px] md:text-8xl font-bold bg-gradient-to-r from-pink-500 via-orange-400 to-sky-400 bg-clip-text text-transparent transform ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+              Tikirimali Wickramasinghe
+            </h2>
+          <p className={`text-xl md:text-2xl text-gray-600 transform ${isVisible ? 'animate-fade-in stagger-1' : 'opacity-0'}`}>
+            Classical Fusion Cellist
+          </p>
+          <button 
+            onClick={() => {
+          setShowVideo(true);
+          setCurrentVideo(videos[0].url);
+            }}
+            className={`bg-gradient-to-r from-pink-500 to-orange-400 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2 mx-auto transform ${isVisible ? 'animate-fade-in stagger-2' : 'opacity-0'}`}
+          >
+            <Play size={20} />
+            <span>Watch Latest Performance</span>
+          </button>
+        </div>
           </div>
         </div>
       </section>
