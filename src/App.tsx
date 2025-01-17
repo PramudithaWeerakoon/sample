@@ -1,4 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import img1 from '/assets/images/p1.jpg';
+import img2 from '/assets/images/p2.jpg';
+import img3 from '/assets/images/p3.jpg';
+import img4 from '/assets/images/p4.jpg';
+import icon from '/assets/images/icon.jpg';
+
+
+
+const performanceImages = [img1, img2, img3, img4];
+
 import { 
   //Music, 
   Calendar, 
@@ -25,12 +35,7 @@ function App() {
     setIsVisible(true);
   }, []);
 
-  const performanceImages = [
-    "assets/images/p1.jpg",
-    "assets/images/p2.jpg",
-    "assets/images/p3.jpg",
-    "assets/images/p4.jpg"
-  ];
+
 
   const videos = [
     {
@@ -116,32 +121,38 @@ function App() {
               <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
                 About Tikirimali Wickramasinghe
               </h1>
-                <p className="text-lg text-gray-600">
-                A virtuoso cellist known for blending classical mastery with contemporary innovation. 
-                Her performances captivate audiences worldwide, bringing fresh perspective to both 
-                traditional and modern compositions.
-                </p>
-                <p className="text-lg text-gray-600">
-                Tikirimali has collaborated with numerous renowned artists and orchestras, 
-                showcasing her versatility and passion for music. Her dedication to her craft 
-                and her ability to connect with audiences make her a standout performer in the 
-                world of classical fusion.
-                </p>
               <p className="text-lg text-gray-600">
-                With a unique approach to classical fusion, she creates unforgettable musical 
+                A virtuoso cellist known for blending classical mastery with contemporary innovation.
+                Her performances captivate audiences worldwide, bringing fresh perspective to both
+                traditional and modern compositions.
+              </p>
+              <p className="text-lg text-gray-600">
+                Tikirimali has collaborated with numerous renowned artists and orchestras,
+                showcasing her versatility and passion for music. Her dedication to her craft
+                and her ability to connect with audiences make her a standout performer in the
+                world of classical fusion.
+              </p>
+              <p className="text-lg text-gray-600">
+                With a unique approach to classical fusion, she creates unforgettable musical
                 experiences that bridge the gap between classical tradition and modern expression.
               </p>
             </div>
             <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 animate-fade-in opacity-0 stagger-1">
-              <img 
-                src="assets/images/icon.jpg" 
-              alt="Tikirimali Wickramasinghe performing"
-              className="object-cover w-full h-full"
+              {/* Import the image */}
+              {/*
+          Import the image at the top of your component:
+          import icon from './assets/images/icon.jpg';
+        */}
+              <img
+                src={icon} // Use the imported variable in the src attribute
+                alt="Tikirimali Wickramasinghe performing"
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Gallery Section */}
       <section className="py-20 gradient-overlay">
