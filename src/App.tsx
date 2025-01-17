@@ -26,25 +26,25 @@ function App() {
   }, []);
 
   const performanceImages = [
-    "images/p1.jpg",
-    "images/p2.jpg",
-    "images/p3.jpg",
-    "images/p4.jpg"
+    "dist/assets/p1.jpg",
+    "dist/assets/p2.jpg",
+    "dist/assets/p3.jpg",
+    "dist/assets/p4.jpg"
   ];
 
   const videos = [
     {
-      thumbnail: "images/v1.jpg",
+      thumbnail: "dist/assets/v1.jpg",
       title: "Crystallize",
       url: "https://www.youtube.com/embed/aHjpOzsQ9YI"
     },
     {
-      thumbnail: "images/v2.jpeg",
+      thumbnail: "dist/assets/v2.jpeg",
       title: "Underground",
       url: "https://www.youtube.com/embed/EJ09pSuA9hw"
     },
     {
-      thumbnail: "images/v3.jpg",
+      thumbnail: "dist/assets/v3.jpg",
       title: "Guardian",
       url: "https://www.youtube.com/embed/4MCjU-Du3eI"
     }
@@ -134,7 +134,7 @@ function App() {
             </div>
             <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 animate-fade-in opacity-0 stagger-1">
               <img 
-              src="images/icon.jpg" 
+                src="dist/assets/icon.jpg" 
               alt="Tikirimali Wickramasinghe performing"
               className="object-cover w-full h-full"
               />
