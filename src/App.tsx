@@ -7,6 +7,7 @@ import icon from '/assets/images/icon.jpg';
 import v1 from '/assets/images/v1.jpg';
 import v2 from '/assets/images/v2.jpeg';
 import v3 from '/assets/images/v3.jpg';
+import wedding from '/assets/images/wedding.gif';
 
 
 
@@ -72,7 +73,16 @@ function App() {
       <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent whitespace-nowrap overflow-hidden text-ellipsis">
+            <h1 
+              className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent whitespace-nowrap overflow-hidden text-ellipsis transition-all duration-300 hover:animate-glow"
+              onClick={() => {
+              const element = document.querySelector('.animate-glow');
+              if (element) {
+                element.classList.add('glow');
+                setTimeout(() => element.classList.remove('glow'), 1000);
+              }
+              }}
+            >
               Tikirimali Wickramasinghe
             </h1>
             <div className="hidden md:flex space-x-8">
@@ -115,46 +125,83 @@ function App() {
           </div>
         </div>
       </section>
-
+     
       {/* About Section */}
       <section id="about" className="py-20 bg-white/50">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-slide-in opacity-0">
               <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
-                About Tikirimali Wickramasinghe
+              About Tikirimali Wickramasinghe
               </h1>
-              <p className="text-lg text-gray-600">
-                A virtuoso cellist known for blending classical mastery with contemporary innovation.
-                Her performances captivate audiences worldwide, bringing fresh perspective to both
-                traditional and modern compositions.
+              <p className="text-lg text-gray-600 font-cursive">
+              A virtuoso cellist known for blending classical mastery with contemporary innovation.
+              Her performances captivate audiences worldwide, bringing fresh perspective to both
+              traditional and modern compositions.
               </p>
-              <p className="text-lg text-gray-600">
-                Tikirimali has collaborated with numerous renowned artists and orchestras,
-                showcasing her versatility and passion for music. Her dedication to her craft
-                and her ability to connect with audiences make her a standout performer in the
-                world of classical fusion.
+              <p className="text-lg text-gray-600 font-cursive">
+              Tikirimali has collaborated with numerous renowned artists and orchestras,
+              showcasing her versatility and passion for music. Her dedication to her craft
+              and her ability to connect with audiences make her a standout performer in the
+              world of classical fusion.
               </p>
-              <p className="text-lg text-gray-600">
-                With a unique approach to classical fusion, she creates unforgettable musical
-                experiences that bridge the gap between classical tradition and modern expression.
+              <p className="text-lg text-gray-600 font-cursive">
+              With a unique approach to classical fusion, she creates unforgettable musical
+              experiences that bridge the gap between classical tradition and modern expression.
+              </p>
+              <p className="text-lg text-gray-600 font-cursive">
+              She also engages in music composition and is an active player in the 
+              <a href="https://www.sosl.org/" className="text-pink-500 hover:underline"> Symphony Orchestra of Sri Lanka</a>.
               </p>
             </div>
-            <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 animate-fade-in opacity-0 stagger-1">
-              {/* Import the image */}
-              {/*
-          Import the image at the top of your component:
-          import icon from './assets/images/icon.jpg';
-        */}
+            <div className="relative w-47 h-47 overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 animate-fade-in opacity-0 stagger-1">
               <img
-                src={icon} // Use the imported variable in the src attribute
-                alt="Tikirimali Wickramasinghe performing"
-                className="object-cover w-full h-full"
+              src={icon}
+              alt="Tikirimali Wickramasinghe performing"
+              className="object-cover w-full h-full"
               />
             </div>
           </div>
         </div>
       </section>
+
+      {/* Performances Section */}
+      <section id="performances" className="py-20 bg-white/50">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 animate-slide-in opacity-0">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
+                Performances for Every Occasion
+              </h1>
+              <p className="text-lg text-gray-600">
+                Tikirimali Wickramasinghe offers mesmerizing live music performances, perfect for making
+                your special occasions unforgettable. Her captivating melodies create an atmosphere
+                of elegance and joy.
+              </p>
+              <p className="text-lg text-gray-600">
+                She is available to perform at:
+              </p>
+              <ul className="text-lg text-gray-600 list-disc list-inside">
+                <li>🎉 Birthdays</li>
+                <li>🎵 Concerts</li>
+                <li>💍 Weddings</li>
+                <li>✨ Special Events</li>
+              </ul>
+              <p className="text-lg text-gray-600">
+                Whether it’s an intimate gathering or a grand celebration, her music is the perfect addition to your event.
+              </p>
+            </div>
+            <div className="relative w-50 h-50 overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 animate-fade-in opacity-0 stagger-1">
+              <img
+              src={wedding}
+              alt="Tikirimali Wickramasinghe performing at an event"
+              className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
 
 
       {/* Gallery Section */}
