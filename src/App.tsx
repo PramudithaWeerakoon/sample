@@ -3,15 +3,18 @@ import img1 from '/assets/images/p1.jpg';
 import img2 from '/assets/images/p2.jpg';
 import img3 from '/assets/images/p3.jpg';
 import img4 from '/assets/images/p4.jpg';
+import img5 from '/assets/images/p5.jpg';
 import icon from '/assets/images/icon.jpg';
 import v1 from '/assets/images/v1.jpg';
 import v2 from '/assets/images/v2.jpeg';
 import v3 from '/assets/images/v3.jpg';
 import wedding from '/assets/images/wedding.gif';
+import mp3 from '/assets/images/testnew.mp3';
 
 
 
-const performanceImages = [img1, img2, img3, img4];
+
+const performanceImages = [img1, img2, img3, img4, img5];
 
 import { 
   //Music, 
@@ -130,37 +133,52 @@ function App() {
       <section id="about" className="py-20 bg-white/50">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-slide-in opacity-0">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
-              About Tikirimali Wickramasinghe
-              </h1>
-              <p className="text-lg text-gray-600 font-cursive">
-              A virtuoso cellist known for blending classical mastery with contemporary innovation.
-              Her performances captivate audiences worldwide, bringing fresh perspective to both
-              traditional and modern compositions.
-              </p>
-              <p className="text-lg text-gray-600 font-cursive">
-              Tikirimali has collaborated with numerous renowned artists and orchestras,
-              showcasing her versatility and passion for music. Her dedication to her craft
-              and her ability to connect with audiences make her a standout performer in the
-              world of classical fusion.
-              </p>
-              <p className="text-lg text-gray-600 font-cursive">
-              With a unique approach to classical fusion, she creates unforgettable musical
-              experiences that bridge the gap between classical tradition and modern expression.
-              </p>
-              <p className="text-lg text-gray-600 font-cursive">
-              She also engages in music composition and is an active player in the 
-              <a href="https://www.sosl.org/" className="text-pink-500 hover:underline"> Symphony Orchestra of Sri Lanka</a>.
-              </p>
-            </div>
-            <div className="relative w-47 h-47 overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 animate-fade-in opacity-0 stagger-1">
-              <img
-              src={icon}
-              alt="Tikirimali Wickramasinghe performing"
-              className="object-cover w-full h-full"
-              />
-            </div>
+        <div className="space-y-6 animate-slide-in opacity-0">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent">
+            About Tikirimali Wickramasinghe
+          </h1>
+          <p className="text-lg text-gray-600 font-cursive">
+            A virtuoso cellist known for blending classical mastery with contemporary innovation.
+            Her performances captivate audiences worldwide, bringing fresh perspective to both
+            traditional and modern compositions.
+          </p>
+          <p className="text-lg text-gray-600 font-cursive">
+            Tikirimali has collaborated with numerous renowned artists and orchestras,
+            showcasing her versatility and passion for music. Her dedication to her craft
+            and her ability to connect with audiences make her a standout performer in the
+            world of classical fusion.
+          </p>
+          <p className="text-lg text-gray-600 font-cursive">
+            With a unique approach to classical fusion, she creates unforgettable musical
+            experiences that bridge the gap between classical tradition and modern expression.
+          </p>
+          <p className="text-lg text-gray-600 font-cursive">
+            She also engages in music composition and is an active player in the 
+            <a href="https://www.sosl.org/" className="text-pink-500 hover:underline"> Symphony Orchestra of Sri Lanka</a>.
+          </p>
+          <button 
+            onClick={() => {
+          const audio = document.getElementById('audio') as HTMLAudioElement;
+          if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+          }
+            }}
+            className="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2 mx-auto"
+          >
+            <Play size={20} />
+            <span>Little of Performance</span>
+          </button>
+          <audio id="audio" src={mp3}></audio>
+        </div>
+        <div className="relative w-47 h-47 overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-500 animate-fade-in opacity-0 stagger-1">
+          <img
+            src={icon}
+            alt="Tikirimali Wickramasinghe performing"
+            className="object-cover w-full h-full"
+          />
+        </div>
           </div>
         </div>
       </section>
@@ -269,7 +287,7 @@ function App() {
       <section id="tour" className="py-20 gradient-overlay">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-orange-400 bg-clip-text text-transparent animate-fade-in opacity-0">
-            Tour Dates
+            Event Dates
           </h2>
           <div className="space-y-6">
             {[
